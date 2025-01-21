@@ -1,0 +1,41 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-29-2024 15:57:29
+Job ID:    618922
+User ID:   lfogel3
+Account:   bios
+Job name:  MPNN-AbNetTry1
+Partition: coc-gpu
+---------------------------------------
+----------------------------------------
+chain_id_jsonl is NOT loaded
+----------------------------------------
+fixed_positions_jsonl is NOT loaded
+----------------------------------------
+pssm_jsonl is NOT loaded
+----------------------------------------
+omit_AA_jsonl is NOT loaded
+----------------------------------------
+bias_AA_jsonl is NOT loaded
+----------------------------------------
+tied_positions_jsonl is NOT loaded
+----------------------------------------
+bias by residue dictionary is not loaded, or not provided
+----------------------------------------
+discarded {'bad_chars': 0, 'too_long': 0, 'bad_seq_length': 0}
+----------------------------------------
+Number of edges: 48
+Training noise level: 0.2A
+Generating sequences for: 8iuy
+2 sequences of length 719 generated in 14.8981 seconds
+---------------------------------------
+Begin Slurm Epilog: Apr-29-2024 15:58:01
+Job ID:        618922
+Array Job ID:  _4294967294
+User ID:       lfogel3
+Account:       bios
+Job name:      MPNN-AbNetTry1
+Resources:     cpu=14,gres/gpu:v100=1,mem=16G,node=1
+Rsrc Used:     cput=00:07:28,vmem=232520K,walltime=00:00:32,mem=500K,energy_used=0
+Partition:     coc-gpu
+Nodes:         atl1-1-02-009-33-0
+---------------------------------------

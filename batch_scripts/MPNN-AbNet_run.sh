@@ -1,0 +1,37 @@
+#!/bin/bash
+#SBATCH -JMPNN-AbNetTry1
+#SBATCH -N 1 --ntasks-per-node=14
+#SBATCH --mem-per-gpu=16G
+#SBATCH -t 10:00
+#SBATCH --gres=gpu:V100:1
+#SBATCH --mail-user=lfogel3@gatech.edu
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH -o MPNNabnet_run1.out
+
+# based on the given example script submit_example_1.sh
+
+module load anaconda3/2022.05.0.1
+conda activate proteinMPNN
+folder_with_pdbs="/home/hice1/lfogel3/scratch/data_pp/pdb_files"
+
+output_dir="/home/hice1/lfogel3/scratch/data_pp/output/MPNN-AbNet_ab1"
+
+if [ ! -d $output_dir ]
+then
+    mkdir -p $output_dir
+fi
+
+path_for_parsed_chains=$output_dir"/parsed_pdbs.jsonl"
+
+python ../helper_scripts/parse_multiple_chains.py --input_path=$folder_with_pdbs --output_path=$path_for_parsed_chains
+
+python ../protein_mpnn_run.py \
+	--model_name MPNN-AbNet50 \
+        --jsonl_path $path_for_parsed_chains \
+        --out_folder $output_dir \
+        --num_seq_per_target 2 \
+        --sampling_temp "0.1" \
+        --seed 37 \
+        --batch_size 1
+
+conda deactivate

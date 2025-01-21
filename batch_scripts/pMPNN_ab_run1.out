@@ -1,0 +1,62 @@
+---------------------------------------
+Begin Slurm Prolog: Apr-29-2024 14:59:53
+Job ID:    618893
+User ID:   lfogel3
+Account:   bios
+Job name:  ProteinMPNNrun_antibodies
+Partition: coc-gpu
+---------------------------------------
+----------------------------------------
+chain_id_jsonl is NOT loaded
+----------------------------------------
+fixed_positions_jsonl is NOT loaded
+----------------------------------------
+pssm_jsonl is NOT loaded
+----------------------------------------
+omit_AA_jsonl is NOT loaded
+----------------------------------------
+bias_AA_jsonl is NOT loaded
+----------------------------------------
+tied_positions_jsonl is NOT loaded
+----------------------------------------
+bias by residue dictionary is not loaded, or not provided
+----------------------------------------
+discarded {'bad_chars': 0, 'too_long': 0, 'bad_seq_length': 0}
+----------------------------------------
+Number of edges: 48
+Training noise level: 0.2A
+Generating sequences for: 7xa3
+2 sequences of length 1361 generated in 9.8695 seconds
+Generating sequences for: 7zox
+2 sequences of length 889 generated in 6.4363 seconds
+Generating sequences for: 8ucd
+2 sequences of length 959 generated in 7.1734 seconds
+Generating sequences for: 6u02
+2 sequences of length 2460 generated in 20.377 seconds
+Generating sequences for: 6xbl
+2 sequences of length 1450 generated in 10.8791 seconds
+Generating sequences for: 5vob
+2 sequences of length 1763 generated in 13.9739 seconds
+Generating sequences for: 6y9b
+2 sequences of length 1440 generated in 11.1761 seconds
+Generating sequences for: 6elu
+2 sequences of length 2588 generated in 20.6381 seconds
+Generating sequences for: 8evh
+2 sequences of length 1617 generated in 11.1338 seconds
+Generating sequences for: 7keb
+2 sequences of length 3363 generated in 26.3599 seconds
+deactivate does not accept arguments
+remainder_args: ['proteinMPNN']
+
+---------------------------------------
+Begin Slurm Epilog: Apr-29-2024 15:03:09
+Job ID:        618893
+Array Job ID:  _4294967294
+User ID:       lfogel3
+Account:       bios
+Job name:      ProteinMPNNrun_antibodies
+Resources:     cpu=10,gres/gpu:v100=1,mem=16G,node=1
+Rsrc Used:     cput=00:32:50,vmem=1285868K,walltime=00:03:17,mem=1205304K,energy_used=0
+Partition:     coc-gpu
+Nodes:         atl1-1-02-010-31-0
+---------------------------------------
